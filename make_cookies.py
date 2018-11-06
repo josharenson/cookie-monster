@@ -61,7 +61,7 @@ def prepare_ingredients(recipe: Recipe) -> Dough:
 
     weight_g = Grams(0)
     for ingredient, grams in recipe.items():
-        for token in ingredient:
+        for token in ingredient.split():
             cmd = ["grep", "-i", token, WORDS_FILE]
             try:
                 subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL)
