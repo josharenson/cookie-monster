@@ -36,7 +36,7 @@ def divide_dough(dough: Dough) -> int:
     return dough // STANDARD_COOKIE_WEIGHT_G
 
 
-def get_recipe(recipe_name: str) -> Recipe:
+def get_recipe(recipe_name: str='chocolate-chip-cookies') -> Recipe:
     """
     Fetch the recipe called `recipe_name` from Josh's S3 bucket.
     """
